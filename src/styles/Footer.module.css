@@ -1,0 +1,143 @@
+.footer {
+  background: #e6d9f2; /* Matches navbar background */
+  color: #333333;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footerLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; /* Ensures links wrap on smaller screens */
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* Centers the links */
+}
+
+.link {
+  text-decoration: none;
+  color: #4a235a;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center; /* Ensures social icons are centered */
+}
+
+.socialIcon {
+  color: #4a235a;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #a594f9;
+  transform: scale(1.2);
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  font: inherit;
+  color: #4a235a;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.linkButton:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.linkButton:focus {
+  outline: none;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .footerLinks {
+      gap: 1.5rem;
+      justify-content: center; /* Center the links on smaller screens */
+  }
+
+  .link {
+      font-size: 0.9rem;
+  }
+
+  .socialLinks {
+      gap: 1rem;
+  }
+
+  .socialIcon {
+      font-size: 1.3rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 500px) {
+  .footerLinks {
+      gap: 1rem; /* Reduce the gap between links */
+      justify-content: center;
+  }
+
+  .link {
+      font-size: 0.8rem;
+  }
+
+  .socialLinks {
+      gap: 0.8rem;
+  }
+
+  .socialIcon {
+      font-size: 1.2rem;
+  }
+}
+
+/* For very small screens (like portrait phones) */
+@media (max-width: 375px) {
+  .footerLinks {
+      flex-direction: column; /* Stack links vertically */
+      gap: 1rem; /* Adjust gap between links */
+  }
+
+  .socialLinks {
+      flex-direction: column; /* Stack social icons vertically */
+      gap: 0.8rem;
+  }
+
+  .socialIcon {
+      font-size: 1.1rem;
+  }
+}

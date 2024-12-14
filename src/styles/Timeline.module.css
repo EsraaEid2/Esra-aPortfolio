@@ -1,0 +1,72 @@
+/* styles/Timeline.module.css */
+.timelineSection {
+    margin-top: 4rem;
+}
+
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 20px;
+    border-left: 3px solid #6a4c93;
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 20px;
+}
+
+.timelineItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: #6a4c93;
+    border-radius: 50%;
+}
+
+.timelineContent {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timelineContent h3 {
+    font-size: 1.5rem;
+    color: #6a4c93;
+    margin-bottom: 0.5rem;
+}
+
+.timelineContent p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.timelineContent ul {
+    padding-left: 20px;
+}
+
+.timelineContent li {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 10px;
+    }
+
+    .timelineItem {
+        padding-left: 10px;
+    }
+
+    .timelineContent {
+        padding: 1rem;
+    }
+}

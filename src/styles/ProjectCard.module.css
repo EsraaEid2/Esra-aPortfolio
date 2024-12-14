@@ -1,0 +1,181 @@
+.projectsWrapper {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #6a4c93;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 30px; /* Increase space between cards */
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.projectCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  padding: 20px;
+  height: auto; /* Adjust the card height to fit content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.projectContent {
+  padding: 15px 0;
+}
+
+.projectContent h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.projectContent p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allows the description to take more space */
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  display: inline-block;
+  background: #4a235a;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  flex: 1 1 45%;
+  max-width: 48%;
+}
+
+.button:hover {
+  background-color: #f1e6ff;
+  color: #4a235a;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(106, 76, 147, 0.4);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #6a4c93; /* Add focus effect */
+}
+
+/* Responsive adjustments for iPad and smaller devices */
+@media (max-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr; /* 2 cards per row on tablets */
+  }
+
+  .projectCard {
+    height: auto;
+  }
+
+  .projectImage {
+    height: 200px; /* Adjust image size for tablets */
+  }
+
+  .projectContent h3 {
+    font-size: 1.4rem; /* Adjust font size for titles on tablets */
+  }
+
+  .projectContent p {
+    font-size: 0.95rem; /* Adjust font size for descriptions */
+  }
+
+  .button {
+    font-size: 1rem; /* Adjust button size */
+    margin: 1rem 0; /* Margin for buttons to prevent overlap */
+    max-width: 100%; /* Full width buttons */
+  }
+}
+
+/* Mobile adjustments (below 768px) */
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+
+  .projectCard {
+    height: auto;
+  }
+
+  .projectImage {
+    height: 180px; /* Adjust image height for smaller screens */
+  }
+
+  .projectContent h3 {
+    font-size: 1.2rem; /* Smaller font size for titles */
+  }
+
+  .projectContent p {
+    font-size: 0.85rem; /* Smaller description text */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Adjust button size */
+    max-width: 100%; /* Full width buttons */
+    margin: 0.5rem 0; /* Ensure buttons don't overlap */
+  }
+}
+
+/* Mobile adjustments (small devices below 480px) */
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2rem; /* Smaller title for very small screens */
+  }
+
+  .projectCard {
+    padding: 15px; /* Reduced padding */
+  }
+
+  .projectContent h3 {
+    font-size: 1.1rem; /* Smaller font for titles */
+  }
+
+  .projectContent p {
+    font-size: 0.75rem; /* Very small description text */
+  }
+
+  .button {
+    font-size: 0.85rem; /* Smaller buttons on very small screens */
+    margin: 0.5rem 0; /* Margin added between buttons */
+  }
+}

@@ -1,0 +1,44 @@
+/* styles/Button.module.css */
+.ctaButton {
+    display: inline-block;
+    background: #4a235a;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.ctaButton:hover {
+    background-color: #f1e6ff;
+    color: #4a235a;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(106, 76, 147, 0.4);
+}
+
+@media (max-width: 768px) {
+    .ctaButton {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ctaButton {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .ctaButton {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+    }
+}

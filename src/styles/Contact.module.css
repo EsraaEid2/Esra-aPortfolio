@@ -1,0 +1,96 @@
+.contactWrapper {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #6a4c93;
+}
+
+.contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input,
+.textarea {
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #4a235a;;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.textarea {
+    resize: none;
+}
+
+.submitButton {
+    background-color: #6a4c93;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #533578;
+}
+
+.socialLinks {
+    margin-top: 3rem;
+}
+
+.socialLink {
+    margin: 0 1rem;
+    color: #6a4c93;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+    color: #533578;
+}
+
+.email {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #6a4c93;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .contactForm {
+        padding: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .input, .textarea {
+        font-size: 0.9rem;
+    }
+
+    .submitButton {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .socialLink {
+        font-size: 1.2rem;
+        margin: 0 0.5rem;
+    }
+}

@@ -1,0 +1,137 @@
+
+.nav {
+  background:#e6d9f2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between logo and right-side group */
+}
+
+/* Right-side Group */
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Space between navLinks and ThemeSwitcher */
+}
+
+/* Logo Styling */
+.logo img {
+  width: 40px; /* Slightly larger for better visibility */
+  height: auto;
+}
+
+/* Menu Toggle Button */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+}
+
+.menuIcon {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  display: block;
+  margin: 6px auto;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menuToggle:hover .menuIcon {
+  background-color: #a594f9;
+}
+
+/* Theme Switcher */
+.themeSwitcherContainer {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Navigation Links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Space between navigation links */
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.navLinks a.active {
+  color: #4a235a;
+  font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .rightGroup {
+    width: 100%;
+    justify-content: space-between; /* Separate navLinks and themeSwitcher */
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .themeSwitcherContainer {
+    margin-left: 0;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    text-align: left;
+    background: var(--background, #f5efff);
+  }
+  .navLinks.showMenu {
+    display: flex;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .navLinks a {
+    font-size: 1rem;
+  }
+}
