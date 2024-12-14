@@ -8,6 +8,11 @@ const ProjectCard = ({ project, onClick }) => {
         src={project.image}
         alt={project.title}
         className={styles.projectImage}
+        // test
+        // test
+        // test
+        // test
+        // test
       />
       <div className={styles.projectContent}>
         <h3>{project.title}</h3>
