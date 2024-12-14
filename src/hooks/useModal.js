@@ -5,9 +5,10 @@ const useModal = () => {
   const [activeContent, setActiveContent] = useState(""); // Store the content (description)
 
   const openModal = (content) => {
-    setActiveContent(content);
+    setActiveContent(content); // Pass the entire project object
     setShowModal(true);
   };
+  
 
   const closeModal = () => {
     setShowModal(false);

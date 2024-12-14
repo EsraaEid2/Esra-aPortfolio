@@ -8,21 +8,17 @@ const ProjectCard = ({ project, onClick }) => {
         src={project.image}
         alt={project.title}
         className={styles.projectImage}
-        // test
-        // test
-        // test
-        // test
-        // test
       />
       <div className={styles.projectContent}>
         <h3>{project.title}</h3>
+        <p>{project.description}</p>
         <div className={styles.buttonGroup}>
-          <button
-            className={styles.button}
-            onClick={() => onClick(project.description)} // Pass the description to the modal
-          >
-           Breif Description
-          </button>
+        <button
+          className={styles.button}
+          onClick={() => onClick(project)} // Pass the full project object
+        >
+        Live Demo
+        </button>
           <a
             className={styles.button}
             href={project.codeLink}

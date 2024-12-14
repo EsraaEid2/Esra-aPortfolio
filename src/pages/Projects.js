@@ -10,31 +10,29 @@ const Projects = () => {
     {
       title: "Hikaya - StoryTelling website",
       description:
-        "Designed a platform that empowers users to write stories and enhance them using OpenAI, which helps with story ideas and generates suitable images. The platform features a rich text editor powered by the Quill library in React, allowing users to create and format stories seamlessly. Stories can be published on the homepage, with readers able to like and explore them. Technologies used include React, Laravel, MySQL, OpenAI, Quill, and JavaScript.",
+        "Designed a platform that empowers users to write stories and enhance them using OpenAI, which helps with story ideas and generates suitable images. The platform features a rich text editor powered by the Quill library in Laravel, allowing users to create and format stories seamlessly. Stories can be published on the homepage or saved as drafts, with readers able to like and explore them. Technologies used include React, Laravel, MySQL, OpenAI, Quill, and JavaScript.",
       image: "/assets/images/hikaya.png",
-      liveLink: "https://example.com",
       codeLink: "https://github.com/EsraaEid2/Hikaya",
-      demoVideo: "https://drive.google.com/uc?id=YOUR_GOOGLE_DRIVE_ID_1&export=download", // Replace with your Google Drive link
+      demoVideo: "https://www.youtube.com/embed/hOVQgoJS07o?si=MriYTKBBQELERgw_", // Direct link format
     },
     {
       title: "GamifyTech E-commerce Website",
       description:
-        "Designed an e-commerce platform for gaming enthusiasts with features like Wish List, Cart, discounts, and order tracking, alongside custom user roles for enhanced functionality. Built with HTML5, CSS3, JavaScript, PHP, and MySQL, it employs the Singleton pattern for secure database connections and was tested on XAMPP for optimal performance",
+        "Designed an e-commerce platform for gaming enthusiasts with features like Wish List, Cart, discounts, and order tracking, alongside custom user roles for enhanced functionality. Built with HTML5, CSS3, JavaScript, PHP, and MySQL, it employs the Singleton pattern for secure database connections and was tested on XAMPP for optimal performance.",
       image: "/assets/images/gamify.png",
-      liveLink: "https://example.com",
       codeLink: "https://github.com/HamzasZaitoun/NextLevelTech",
-      demoVideo: "https://drive.google.com/uc?id=YOUR_GOOGLE_DRIVE_ID_2&export=download", // Replace with your Google Drive link
+      demoVideo: "https://www.youtube.com/embed/JVcsXP8Lqqc?si=fUh5E3Suw1owh53h", // Update link format
     },
     {
       title: "SmartSpending - Budget tracker web app",
       description:
-        "Created a budget tracker web app during the Orange Coding Academy bootcamp, featuring expense tracking, savings insights, and currency conversion. Built with HTML5, CSS3, JavaScript, APIs, and Local Storage, with design via Figma and team collaboration on Trello",
+        "Designed an e-commerce platform for gaming enthusiasts with features like Wish List, Cart, discounts, and order tracking, alongside custom user roles for enhanced functionality. Built with HTML5, CSS3, JavaScript, PHP, and MySQL, it employs the Singleton pattern for secure database connections and was tested on XAMPP for optimal performance.",
       image: "/assets/images/smartSpending.png",
-      liveLink: "https://esraaeid2.github.io/smart_spending/",
       codeLink: "https://github.com/EsraaEid2/smart_spending",
-      demoVideo: "https://drive.google.com/uc?id=18bC3TpujKUMhXhTy4lPYQ_Cx7MapbQlQ&export=download", // This one is already from Google Drive
+      demoVideo: "https://www.youtube.com/embed/AIEqkZxbBhE?si=-shnDeiJUQxGEjvo", // Update link format
     },
   ];
+  
 
   return (
     <div className={styles.projectsWrapper}>
@@ -51,24 +49,41 @@ const Projects = () => {
       </div>
 
       {showModal && (
-        <>
-          <div
-            className={styles.modalOverlay}
-            onClick={closeModal} // Close modal when clicking overlay
-          ></div>
-          <div className={styles.modal}>
-            <h3>Project Details</h3>
-            <p>{activeContent}</p>
-            <button
-              className={styles.button}
-              onClick={closeModal}
-              style={{ marginTop: "1rem" }}
-            >
-              Close
-            </button>
-          </div>
-        </>
+  <>
+    <div
+      className={styles.modalOverlay}
+      onClick={closeModal} // Close modal when clicking overlay
+    ></div>
+    <div className={styles.modal}>
+      <h3>{activeContent.title}</h3> {/* Display project title */}
+
+      {activeContent.demoVideo && (
+        <div className={styles.videoContainer}>
+          <iframe
+            width="100%"
+            height="auto"
+            src={activeContent.demoVideo} // Use the YouTube embed URL
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className={styles.videoPlayer}
+          ></iframe>
+        </div>
       )}
+
+
+
+      <button
+        className={styles.button}
+        onClick={closeModal}
+        style={{ marginTop: "1rem" }}
+      >
+        Close
+      </button>
+    </div>
+  </>
+)}
+
     </div>
   );
 };

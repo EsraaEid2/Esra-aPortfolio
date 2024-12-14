@@ -89,7 +89,6 @@
   outline: none;
   box-shadow: 0 0 5px #6a4c93; 
 }
-
 .modal {
   position: fixed;
   top: 50%;
@@ -99,6 +98,8 @@
   padding: 20px;
   border-radius: 8px;
   z-index: 1000;
+  width: 80%; /* Make modal width responsive */
+  max-width: 900px; /* Max width for larger screens */
 }
 
 .modalOverlay {
@@ -111,9 +112,21 @@
   z-index: 999;
 }
 
-.modal video {
+/* Video container */
+.videoContainer {
+  position: relative;
+  padding-top: 56.25%; /* Aspect ratio (16:9) */
+  background-color: black;
+  margin: 1rem 0;
+}
+
+.videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
+  height: 100%;
+  border-radius: 8px; /* Optional: add rounded corners */
 }
 
 /* Responsive Styles */
@@ -142,15 +155,14 @@
     font-size: 0.9rem;
     margin-bottom: 10px; /* Added margin for spacing between buttons */
   }
-
   .modal {
-    width: 90%;
-    max-width: 500px;
-    padding: 15px;
+    width: 90%; /* Adjust width on smaller screens */
+    max-width: 700px; /* Ensure the modal doesn't exceed a reasonable width */
   }
 
   .modal video {
     max-width: 100%;
+    height: auto; /* Allow the video to adjust its height automatically */
   }
 }
 
@@ -170,5 +182,17 @@
 
   .projectGrid {
     padding: 0 10px;
+  }
+
+  .modal {
+    width: 95%; /* Further reduce width on small screens */
+    max-width: 480px;
+    padding: 15px;
+  }
+  .videoContainer {
+    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+  }
+  .videoPlayer {
+    border-radius: 4px; /* Optionally add smaller radius for tiny screens */
   }
 }

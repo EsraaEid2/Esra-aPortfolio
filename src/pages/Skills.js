@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/skills.module.css";
-import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
+import { FaReact, FaGithub } from "react-icons/fa";
 import { SiJavascript, SiHtml5, SiCss3, SiPhp, SiMysql, SiLaravel, SiTrello } from "react-icons/si";
 
 const Skills = () => {
@@ -14,7 +14,6 @@ const Skills = () => {
     const backEndSkills = [
         { name: "PHP", icon: <SiPhp /> },
         { name: "Laravel", icon: <SiLaravel /> },
-        { name: "Node.js", icon: <FaNodeJs /> },
     ];
 
     const databaseSkills = [
